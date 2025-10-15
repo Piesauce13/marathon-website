@@ -1,0 +1,43 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a3d62;
+  padding: 10px 20px;
+}
+.navbar .logo { color: #fff; font-weight: bold; }
+.nav-links { list-style: none; display: flex; gap: 15px; }
+.nav-links a { color: #fff; text-decoration: none; }
+.nav-links a.active { text-decoration: underline; }
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('../assets/images/marathon-banner.jpg') center/cover no-repeat;
+  color: white;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #38ada9;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  background: #0a3d62;
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+}
