@@ -12,10 +12,10 @@
     <nav class="navbar">
       <div class="logo">🏃‍♀️ Marathon 2025</div>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" >Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="races.html">Races</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -24,36 +24,38 @@
 <section class="register">
   <h1>Register for the Marathon</h1>
   <form>
-    <label>Full Name</label>
-    <input type="text" required>
+    <label>Full Name</label> <br>
+    <input type="text" required placeholder="John Wick"> <br>
 
-    <label>Email</label>
-    <input type="email" required>
+    <label>Email</label> <br>
+    <input type="email" required placeholder="johnwick12@hotmail.com"> <br>
 
-    <label>Race Category</label>
+    <label>Race Category</label> <br>
     <select required>
-      <option value="">Select a race</option>
+      <option value=""><i>Select a race</i></option>
       <option value="3km">3KM Fun Run</option>
       <option value="5km">5KM City Sprint</option>
       <option value="10km">10KM Challenge</option>
-    </select>
+    </select> <br>
 
-    <label>T-Shirt Size</label>
+    <label>T-Shirt Size</label> <br>
     <select>
       <option>S</option><option>M</option><option>L</option><option>XL</option>
-    </select>
-
-    <button type="submit" class="btn">Submit Registration</button>
+    </select> <br>
+    <br>
+    <button type="submit" class="btn">Submit Registration</button> 
   </form>
 
   <div class="info">
+    <br>
     <h3>Entry Fees</h3>
     <ul>
-      <li>3KM – $10</li>
-      <li>5KM – $15</li>
-      <li>10KM – $20</li>
+      <li>3KM -- $10</li>
+      <li>5KM -- $15</li>
+      <li>10KM -- $20</li>
     </ul>
-    <p>Registration closes January 5, 2025.</p>
+    <br>
+    <p style="color: brown;"><i>Registration closes January 5, 2025.</i></p>
   </div>
 </section>
 
@@ -65,6 +67,8 @@
         <a href="#">Twitter</a>
     </div>
 </footer>
+
+<link rel="stylesheet" href="style.css">
 
 </body>
 </html>
