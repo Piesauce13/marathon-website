@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.6;
   background: #fafafa;
   color: #333;
@@ -277,4 +277,82 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+
+/* Race.html */
+.race-overview {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #00458f, #00c6ff);
+  color: white;
+}
+.race-overview h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.race-container {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  align-items: center;     /* Center vertically if the section is tall */
+  gap: 1.5rem;             /* Space between cards */
+  padding: 2rem 0;
+}
+
+.race-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.race-card:hover {
+  transform: translateY(-8px);
+}
+
+.race-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain; /* Prevent zoomed-in look */
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.race-card img:hover {
+  transform: scale(1.2); /* makes it pop */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 5;
+  position: relative;
+}
+
+.race-card h3 {
+  margin: rem;
+  color: #0078d4;
+  text-align: center;
+}
+
+.race-card p {
+  margin: 0.5rem 1rem 1rem;
+  text-align: center;
+}
+
+/* Race Details */
+.race-details {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.race-details ul {
+  list-style: none;
+  padding: 0;
+}
+.race-details li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
 }
