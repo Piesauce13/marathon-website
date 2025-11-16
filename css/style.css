@@ -1,6 +1,6 @@
 /*
 =====================================================
---- 1. ORIGINAL WEBSITE STYLES (UNCHANGED) from the main css file ffrom main branch ---
+--- 1. ORIGINAL WEBSITE STYLES (UNCHANGED) ---
 =====================================================
 */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -163,9 +163,9 @@ footer a{
 
 
 /*
-=======================================================================
---- 2. NEW STYLES FOR THE ABOUT PAGE (CHANGES START FROM HERE) ---
-=======================================================================
+=====================================================
+--- 2. NEW STYLES FOR THE TRADITIONAL ABOUT PAGE ---
+=====================================================
 */
 
 /* --- Base container for the About page --- */
@@ -338,12 +338,19 @@ footer a{
   }
 }
 
-/* --- Styles for the new Photo Gallery --- */
+/*
+=====================================================
+--- FINAL STYLES FOR PHOTO GALLERY (WITH HOVER) ---
+=====================================================
+*/
+
+/* --- Main gallery section layout --- */
 .about .gallery-section {
   text-align: center;
   margin-bottom: 50px;
 }
 
+/* --- The grid container --- */
 .about .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
@@ -351,20 +358,73 @@ footer a{
   margin-top: 20px;
 }
 
-.about .gallery-grid img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+/* --- The container for each image and its description --- */
+.about .gallery-item {
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.about .gallery-item p {
+  color: white;
+  font-size: 14px;
+}
+/* --- The image itself (fixed size and zoom transition) --- */
+.about .gallery-item img {
+  width: 100%;
+  height: 280px; /* THIS IS THE FIX: A fixed height for all images */
+  object-fit: cover; /* This makes the image fill the space without stretching */
+  display: block; /* Removes any extra space below the image */
+  transition: transform 0.4s ease;
 }
 
-.about .gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+/* --- The hover effect that zooms the image --- */
+.about .gallery-item:hover img {
+  transform: scale(1.1); /* The zoom effect */
 }
 
-/* Responsive adjustment for the gallery */
+/* --- The description overlay (hidden by default) --- */
+.about .gallery-item .image-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 61, 98, 0.9), rgba(10, 61, 98, 0.5));
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* --- The hover effect that shows the description --- */
+.about .gallery-item:hover .image-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Text styling and animation inside the overlay --- */
+.about .image-description h3, .about .image-description p {
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
+}
+
+.about .gallery-item:hover .image-description h3,
+.about .gallery-item:hover .image-description p {
+  transform: translateY(0);
+}
+
+.about .image-description p {
+  transition-delay: 0.1s; /* Slight delay for the paragraph */
+}
+
+/* --- Responsive adjustments for the gallery --- */
 @media (max-width: 992px) {
   .about .gallery-grid {
     grid-template-columns: 1fr; /* Stack images on smaller screens */
