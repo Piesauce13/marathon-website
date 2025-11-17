@@ -2,43 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | Koh Dach Run 2025</title>
+  <title>Our Story | Koh Dach Run 2025</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <nav class="navbar">
-    <div class="logo">🏝️ Koh Dach Run 2025</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="races.html">Races</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+      <div class="navbar-brand">
+        <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
+        <span>Koh Dach Run 2025</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="dropdown">
+            <li><a href="about.html#mission">Mission</a></li>
+            <li><a href="about.html#gallery">Gallery</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="races.html">Races</a>
+          <ul class="dropdown">
+            <li><a href="races.html#5km">5Km Run</a></li>
+            <li><a href="races.html#10km">10km Run</a></li>
+          </ul>
+        </li>
+        <li><a href="register.html">Register</a></li>
+        <li>
+          <a href="contact.html">Contact</a>
+          <ul class="dropdown">
+            <li><a href="contact.html#contact">Message Us</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>  
 </header>
 
 <section class="about">
-  <h1>About Koh Dach Run</h1>
-  <p>
-    Koh Dach, also known as Silk Island, is a peaceful island on the Mekong River just a short ferry ride from Phnom Penh.
-    Our marathon celebrates the island’s natural beauty and rich silk-weaving culture while supporting local communities.
-  </p>
 
-  <h2>Our Mission</h2>
-  <p>
-    The Koh Dach Run aims to promote health, eco-tourism, and cultural preservation.  
-    Proceeds will support local silk-making families and rural schools on the island.
-  </p>
-
-  <h2>Photo Gallery</h2>
-  <div class="gallery">
-    <img src="assets/images/island1.jpg" alt="">
-    <img src="assets/images/silk1.jpg" alt="">
-    <img src="assets/images/run1.jpg" alt="">
+  <div class="intro-section">
+    <h1>Our Story: Running for Silk Island</h1>
+    <p class="subtitle">We are more than just a marathon; we are a community-driven initiative dedicated to celebrating and supporting the vibrant culture of Koh Dach.</p>
   </div>
+
+  <h2>Our Mission & Motivation</h2>
+  <div id="mission" class="mission-story-section">
+    <div class="mission-story-text">
+      <p class="lead-paragraph">The Koh Dach Run began with a simple idea: to bring people together through movement, nature, and community. By blending health, eco-tourism, and cultural preservation, we aim to create an event that benefits both visitors and local communities alike.</p> 
+      <p class="lead-paragraph">Our key objectives are to:</p>
+      <ul class="mission-list">
+        <li>Inspire healthy lifestyles and encourage community engagement.</li>
+        <li>Support local silk weaving families and rural schools on the island.</li>
+        <li>Boost eco-tourism and celebrate the unique culture of Koh Dach.</li>
+      </ul>
+    </div>
+    <div class="mission-story-image">
+      <img src="https://www.globalgiving.org/pfil/25923/ph_25923_94255.jpg" alt="Children in a Cambodian school smiling">
+    </div>
+  </div>
+
+  <div id="gallery" class="gallery-section">
+    <h2>A Glimpse of Koh Dach</h2>
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="https://kampatour.com/pic/blog/images/The%20Craft%20of%20Weaving%20Silk.jpg", alt="A Cambodian woman weaving traditional silk"  >
+        <div class="image-description">
+          <h3>Traditional Silk Weaving</h3>
+          <p>Discover the craft that gives Silk Island its name.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://lirp.cdn-website.com/6877c107/dms3rep/multi/opt/d3-1920w.jpg" alt="drone view of Koh Dach island with river surrounding it">
+        <div class="image-description">
+          <h3>Scenic Island Routes</h3>
+          <p>Run through beautiful landscapes and serene village paths.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://www.travelbeginsat40.com/wp-content/uploads/2025/03/SilkIsland07.jpg.webp" alt="A vibrant Cambodian village with residents">
+        <div class="image-description">
+          <h3>Vibrant Community</h3>
+          <p>Experience the warm and welcoming spirit of the island.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="team" class="team-section">
+    <h2>Meet the Organizers</h2>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="assets/images/vatank-chea.jpg" alt="Race Director">
+        <h4>Vatanak Chea</h4>
+        <p class="team-title">Race Director</p>
+        <p class="team-bio">With over 3 years of experience managing events for his university, David is the driving force behind the Koh Dach Run.</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/sophea-lim.jpg" alt="Community Manager">
+        <h4>Sophea Lim</h4>
+        <p class="team-title">Community Manager</p>
+        <p class="team-bio">A native of the Koh Dach area, Sophea's role is to ensure the event directly benefits the island's residents and local artisans.</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/micheal-wei.jpg" alt="Logistics Head">
+        <h4>Michael Wei</h4>
+        <p class="team-title">Logistics Head</p>
+        <p class="team-bio">Michael is an expert in logistics, ensuring a safe and smooth experience for every participant from the start line to the finish.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2>See the various ways to get involved!</h2>
+    <b>Go to our contact page below</b>
+    <a href="contact.html" class="btn btn-cta">Contact Us</a>
+  </div>
+
 </section>
 
 <footer>

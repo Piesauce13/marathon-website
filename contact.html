@@ -2,51 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Koh Dach Run 2025</title>
+  <title>Contact Us | Koh Dach Run 2025</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <nav class="navbar">
-    <div class="logo">🏝️ Koh Dach Run 2025</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="races.html">Races</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+      <div class="navbar-brand">
+        <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
+        <span>Koh Dach Run 2025</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="dropdown">
+            <li><a href="about.html#mission">Mission</a></li>
+            <li><a href="about.html#gallery">Gallery</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="races.html">Races</a>
+          <ul class="dropdown">
+            <li><a href="races.html#5km">5Km Run</a></li>
+            <li><a href="races.html#10km">10km Run</a></li>
+          </ul>
+        </li>
+        <li><a href="register.html">Register</a></li>
+        <li>
+          <a href="contact.html">Contact</a>
+          <ul class="dropdown">
+            <li><a href="contact.html#contact">Message Us</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>    
 </header>
 
-<section class="contact">
-  <h1>Contact Us</h1>
-  <form>
-    <label>Name</label>
-    <input type="text" required>
-    <label>Email</label>
-    <input type="email" required>
-    <label>Message</label>
-    <textarea rows="5" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-
-  <div class="faq">
-    <h2>FAQ</h2>
-    <details>
-      <summary>How do I get to Koh Dach?</summary>
-      <p>Take the ferry from Chroy Changvar ferry port. The ride takes around 10 minutes.</p>
-    </details>
-    <details>
-      <summary>Where does the race start?</summary>
-      <p>At the main ferry pier on Koh Dach island.</p>
-    </details>
-    <details>
-      <summary>What happens if it rains?</summary>
-      <p>The run will continue unless severe weather occurs.</p>
-    </details>
+<section class="about">
+  <div class="intro-section">
+    <h1>Contact Us!</h1>
+    <p class="subtitle">Have questions or want to get involved? We'd love to hear from you!</p>
   </div>
+
+
+  <div id="contact" class="contact-main-layout">
+    <!-- Column 1: The Contact Form -->
+    <div class="contact-form-container">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Please enter Your Full Name" required="Please Enter Your Full Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Please enter Your Email" required="Please Enter Your Email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Please enter Your Message" required="Please Enter Your Message"></textarea>
+        </div>
+        <!-- REUSED: The .btn and .btn-cta classes style the button perfectly -->
+        <button type="submit" class="btn btn-cta">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Column 2: Contact Details and Map -->
+    <div class="contact-info-container">
+      <h2>Get in Touch</h2>
+      <ul class="contact-details">
+        <li><strong>Email:</strong> <a href="mailto:info@kohdachrun.com">info@kohdachrun.com</a></li>
+        <li><strong>Socials:</strong> <a href="https://www.facebook.com/">Facebook</a> | <a href="https://www.instagram.com/">Instagram</a> | <a href="https://x.com/">X</a></li>
+      </ul>
+
+      <h2>Event Location</h2>
+      <p>The race will be held on the beautiful island of Koh Dach, just a short ferry ride from Phnom Penh!</p>
+      <div class="map-container">
+        <!-- Replace this with your actual Google Maps embed code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62517.803267226795!2d104.94282514999999!3d11.6686869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310954abe3f551d5%3A0x8bb07ebca3a5e83f!2sKoh%20Dach!5e0!3m2!1sen!2skh!4v1763282908679!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW: Enhanced FAQ Section -->
+  <div id="faq" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>How do I get to Koh Dach?</h4>
+      <p>You can reach Koh Dach via the ferry terminal located on Highway 6. The ferry ride is short and scenic, and there will be clear signs directing participants on race day.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Where does the race start?</h4>
+      <p>The starting line for all races will be near the main pagoda on the island. We will provide a detailed map and instructions in your race packet upon registration.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What happens if it rains?</h4>
+      <p>The Koh Dach Run is a rain-or-shine event. In the case of severe weather that poses a danger to participants, we will notify everyone of any delays or cancellations via email and our social media channels.</p>
+    </div>
+  </div>
+
 </section>
 
 <footer>

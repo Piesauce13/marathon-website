@@ -2,45 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Races | Koh Dach Run 2025</title>
+  <title>Race Information | Marathon 2025</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">🏝️ Koh Dach Run 2025</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="races.html">Races</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
+        <span>Koh Dach Run 2025</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="dropdown">
+            <li><a href="about.html#mission">Mission</a></li>
+            <li><a href="about.html#gallery">Gallery</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="races.html">Races</a>
+          <ul class="dropdown">
+            <li><a href="races.html#5km">5Km Run</a></li>
+            <li><a href="races.html#10km">10km Run</a></li>
+          </ul>
+        </li>
+        <li><a href="register.html">Register</a></li>
+        <li>
+          <a href="contact.html">Contact</a>
+          <ul class="dropdown">
+            <li><a href="contact.html#contact">Message Us</a></li>
+            <li><a href="contact.html#faq">FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="races">
+<section class="race-overview">
   <h1>Race Information</h1>
-  <div class="race-card">
-    <h2>3KM Family Fun Run</h2>
-    <img src="assets/maps/3km.png" alt="3km Map">
-    <p>A relaxed route through village roads and shaded paths. Great for beginners!</p>
-  </div>
-  <div class="race-card">
-    <h2>5KM Challenge</h2>
-    <img src="assets/maps/5km.png" alt="5km Map">
-    <p>Moderate course with small hills and local village scenery.</p>
-  </div>
-  <div class="race-card">
-    <h2>10KM Adventure</h2>
-    <img src="assets/maps/10km.png" alt="10km Map">
-    <p>Explore the island’s farmlands, silk workshops, and riverside views. Intermediate level.</p>
+  <p>
+      Whether you’re a joy runner or a seasoned athlete, Koh Dach Marathon offers the perfect island route.
+      Explore our race options below and pick your challenge!
+    </p>
+</section>
+
+<section class="race-section">
+  <div class="race-container">
+    <div id="5km" class="race-card">
+      <img src="assets/images/5km.png" alt="5km Route">
+      <h3>5km Joy Run</h3>
+      <p><strong>Start Time:</strong> 7:00 AM</p>
+      <p><strong>Distance:</strong> 5 km</p>
+      <p><strong>Difficulty:</strong> Easy</p>
+      <p><strong>Fee:</strong> $8</p>
+      <p><strong>Route:</strong> Smooth trails alongside silk farms.</p>
+    </div>
+
+    <div id="10km" class="race-card">
+      <img src="assets/images/10km.png" alt="10km Route">
+      <h3>10km Island Trail</h3>
+      <p><strong>Start Time:</strong> 6:40 AM</p>
+      <p><strong>Distance:</strong> 10 km</p>
+      <p><strong>Difficulty:</strong> Moderate</p>
+      <p><strong>Fee:</strong> $10</p>
+      <p><strong>Route:</strong> Mix of dirt paths and paved roads with beautiful river views.</p>
+    </div>
   </div>
 </section>
 
+<section class="race-details">
+    <h2>Additional Information</h2>
+    <ul>
+      <li><strong>Start/Finish Line:</strong> Amra (អមរា) </li>
+      <li><strong>Checkpoints:</strong> Every 2.5 km (water & medical aid)</li>
+      <li><strong>Terrain:</strong> Cement road & Paved village roads</li>
+      <li><strong>Hydration Points:</strong> At every checkpoints</li>
+      <li><strong>Safety Guidelines:</strong> Follow staff directions and stay hydrated</li>
+      <li><strong>Ferry Info:</strong> Take the ferry from Chroy Changvar port for <strong> free</strong> (operates from 5:30 AM)</li>
+    </ul>
+  </section>
+
+
 <footer>
-  <p>&copy; 2025 Koh Dach Run | Supporting the Silk Island Community</p>
+    <p>&copy; 2025 Marathon Cambodia | All Rights Reserved</p>
+    <div class="social">
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+    </div>
 </footer>
 
 </body>
