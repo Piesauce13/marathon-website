@@ -1029,7 +1029,7 @@ input::placeholder{
 input[type="radio"]{
   width: 12%;
   height: 15px;
-  margin-right: 0.01rem;
+  margin-right: 0rem;
   padding: 0px;
 }
 
