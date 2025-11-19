@@ -951,7 +951,10 @@ input[type="radio"]{
 .info th:nth-child(2) {
   text-align: center;
 }
-
+.btn-register a{
+  text-decoration: none;
+  color: white;
+}
 .gender-option{
   margin: -30px;
 }
