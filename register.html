@@ -32,7 +32,7 @@
             <li><a href="races.html#10km">10km Run</a></li>
           </ul>
         </li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
         <li>
           <a href="contact.html">Contact</a>
           <ul class="dropdown">
@@ -62,8 +62,8 @@
     <label>Race Category</label> <br>
     <select required>
       <option value=""><i>Select a race</i></option>
-      <option value="5km">5KM Fun Run</option>
-      <option value="5km">10KM City Sprint</option>
+      <option value="5km" id="5km">5KM Fun Run</option>
+      <option value="5km" id="10km">10KM City Sprint</option>
 
     </select> <br>
 
@@ -87,12 +87,12 @@
       <th style="text-align: center;">Trail Condition</th>
     </tr>
     <tr>
-      <td>5KM</td>
+      <td><a href="races.html#5km" style="text-decoration: underline; color: black;">5KM</a></td>
       <td>$10</td>
       <td>Smooth trails alongside local silk farms.</td>
     </tr>
     <tr>
-      <td>10KM</td>
+      <td><a href="races.html#10km" style="text-decoration: underline; color:black;">10KM</a></td>
       <td>$15</td>
       <td>Mix of dirt paths and paved roads with beautiful river views.</td>
     </tr>
@@ -113,6 +113,6 @@
         <a href="#">Twitter</a>
     </div>
 </footer>
-
+<link rel="stylesheet" href="style.css">
 </body>
 </html>
