@@ -43,59 +43,95 @@
     </nav>
   </header>
 
-<section class="race-overview">
-  <h1>Race Information</h1>
-  <p>
-      Whether you’re a joy runner or a seasoned athlete, Koh Dach Marathon offers the perfect island route.
-      Explore our race options below and pick your challenge!
-    </p>
-</section>
-
-<section class="race-section">
-  <div class="race-container">
-    <div id="5km" class="race-card">
-      <img src="assets/images/5km.png" alt="5km Route">
-      <h3>5km Joy Run</h3>
-      <p><strong>Start Time:</strong> 7:00 AM</p>
-      <p><strong>Distance:</strong> 5 km</p>
-      <p><strong>Difficulty:</strong> Easy</p>
-      <p><strong>Fee:</strong> $8</p>
-      <p><strong>Route:</strong> Smooth trails alongside silk farms.</p>
+<!-- Race Overview -->
+  <section class="race-overview">
+    <div class="overview-content">
+      <h1>Race Information</h1>
+      <p>
+        Whether you’re a joy runner or a seasoned athlete, Koh Dach Marathon offers the perfect island route.  
+        Explore our race options below and pick your challenge!
+      </p>
+      <a href="register.html" class="btn">Register Now</a>
     </div>
+  </section>
 
-    <div id="10km" class="race-card">
-      <img src="assets/images/10km.png" alt="10km Route">
-      <h3>10km Island Trail</h3>
-      <p><strong>Start Time:</strong> 6:40 AM</p>
-      <p><strong>Distance:</strong> 10 km</p>
-      <p><strong>Difficulty:</strong> Moderate</p>
-      <p><strong>Fee:</strong> $10</p>
-      <p><strong>Route:</strong> Mix of dirt paths and paved roads with beautiful river views.</p>
+  <!-- Race Cards Section -->
+  <section class="race-section">
+    <div class="race-container">
+
+      <!-- 5km Card -->
+      <div id="5km" class="race-card">
+        <img src="assets/images/5km.png" alt="5km Route">
+        <h3>5Km Joy Run</h3>
+        <ul class="race-info">
+          <li><strong>Start Time:</strong> 7:00 AM</li>
+          <li><strong>Distance:</strong> 5 km</li>
+          <li><strong>Fee:</strong> $8</li>
+          <li><strong>Route:</strong> Smooth trails alongside local silk farms.</li>
+        </ul>
+        <a href="register.html#5km" class="btn-register">Register Now</a>
+      </div>
+
+      <!-- 10km Card -->
+      <div id="10km" class="race-card">
+        <img src="assets/images/10km.png" alt="10km Route">
+        <h3>10Km Island Trail</h3>
+        <ul class="race-info">
+          <li><strong>Start Time:</strong> 6:40 AM</li>
+          <li><strong>Distance:</strong> 10 km</li>
+          <li><strong>Fee:</strong> $15</li>
+          <li><strong>Route:</strong> Mix of dirt paths and paved roads with beautiful river views.</li>
+        </ul>
+        <a href="register.html#10km" class="btn-register">Register Now</a>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="race-details">
+  <!-- Additional Information Table -->
+  <section class="race-details">
     <h2>Additional Information</h2>
-    <ul>
-      <li><strong>Start/Finish Line:</strong> Amra (អមរា) </li>
-      <li><strong>Checkpoints:</strong> Every 2.5 km (water & medical aid)</li>
-      <li><strong>Terrain:</strong> Cement road & Paved village roads</li>
-      <li><strong>Hydration Points:</strong> At every checkpoints</li>
-      <li><strong>Safety Guidelines:</strong> Follow staff directions and stay hydrated</li>
-      <li><strong>Ferry Info:</strong> Take the ferry from Chroy Changvar port for <strong> free</strong> (operates from 5:30 AM)</li>
-    </ul>
+    <div class="table-responsive">
+      <table class="race-info-table">
+        <tbody>
+          <tr>
+            <td>Start/Finish Line</td>
+            <td>Amra (អមរា)</td>
+          </tr>
+          <tr>
+            <td>Checkpoints</td>
+            <td>Every 2.5 km (snacks & medical aid)</td>
+          </tr>
+          <tr>
+            <td>Terrain</td>
+            <td>Cement road & Paved village roads</td>
+          </tr>
+          <tr>
+            <td>Hydration Points</td>
+            <td>At every checkpoint</td>
+          </tr>
+          <tr>
+            <td>Safety Guidelines</td>
+            <td>Follow staff directions and stay hydrated</td>
+          </tr>
+          <tr>
+            <td>Ferry Info</td>
+            <td>Take the ferry from Chroy Changvar port for <strong>free</strong> (operates from 5:30 AM)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
 
-<footer>
-    <p>&copy; 2025 Marathon Cambodia | All Rights Reserved</p>
-    <div class="social">
-        <a href="#">Facebook</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">Twitter</a>
-    </div>
-</footer>
+  <footer>
+      <p>&copy; 2025 Marathon Cambodia | All Rights Reserved</p>
+      <div class="social">
+          <a href="#">Facebook</a> |
+          <a href="#">Instagram</a> |
+          <a href="#">Twitter</a>
+      </div>
+  </footer>
 
 </body>
 </html>
