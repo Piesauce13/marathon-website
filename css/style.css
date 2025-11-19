@@ -852,7 +852,6 @@ footer {
 /* ============================= */
 /* --- REGISTER PAGE STYLES --- */
 /* ============================ */
-
 label {
   display: inline-block;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -872,15 +871,88 @@ input {
   border: none;
   padding: 5px;
   width: 100%;
-  height: 25px;
+  height: 30px;
   border-radius: 5px;
 }
 
 select {
   width: 100%;
   border-radius: 5px;
-  height: 25px;
+  height: 30px;
   border: none;
+}
+
+
+input::placeholder{
+  color: rgb(168, 155, 155);
+  font-style: italic;
+}
+input[type="radio"]{
+  width: 12%;
+  height: 11px;
+  padding: 0px;
+  text-align: left;
+}
+
+.card label{
+  float: left;
+  font-weight: bold;
+  text-decoration: wavy;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card.reg{
+  background-color: #e9f3f1;
+}
+.info li{
+  list-style-type: none;
+}
+.info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
+.info th,
+.info td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: left;
+  border-top: none;
+}
+
+.info th {
+  border-top: solid 1px aliceblue;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+
+
+.info tr:hover {
+  background-color: #f0f8ff;
+}
+
+
+.info td:first-child,
+.info th:first-child {
+  width: 25%;
+}
+
+
+.info td:nth-child(2),
+.info th:nth-child(2) {
+  text-align: center;
+}
+.btn-register a{
+  text-decoration: none;
+  color: white;
+}
+.gender-option{
+  margin: -30px;
 }
 
 /* ===================== */
