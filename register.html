@@ -10,58 +10,43 @@
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <div class="navbar-brand">
-        <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
-        <span>Koh Dach Run 2025</span>
-      </div>
+      <div class="logo">🏃‍♀️ Marathon 2025</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="about.html">About</a>
-          <ul class="dropdown">
-            <li><a href="about.html#mission">Mission</a></li>
-            <li><a href="about.html#gallery">Gallery</a></li>
-            <li><a href="about.html#team">Our Team</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="races.html">Races</a>
-          <ul class="dropdown">
-            <li><a href="races.html#5km">5Km Run</a></li>
-            <li><a href="races.html#10km">10km Run</a></li>
-          </ul>
-        </li>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="races.html">Races</a></li>
         <li><a href="register.html" class="active">Register</a></li>
-        <li>
-          <a href="contact.html">Contact</a>
-          <ul class="dropdown">
-            <li><a href="contact.html#contact">Message Us</a></li>
-            <li><a href="contact.html#faq">FAQs</a></li>
-          </ul>
-        </li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-<section class="register">
+<section class="card reg">
   <h1>Register for the Marathon</h1>
   <form>
     <label>Full Name</label> <br>
-    <input type="text" required placeholder="John Wick"> <br>
+    <input type="text" required placeholder="Sokha Raingsey"> <br>
 
     <label>Email</label> <br>
-    <input type="email" required placeholder="johnwick12@hotmail.com"> <br>
+    <input type="email" required placeholder="sokha182@hotmail.com"> <br>
+    <label for="gender">Gender 
+    </label> <br> <br>
+    <input type="radio" name="gender">Female 
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Prefer not to say
+    <br>
+
 
     <label>Race Category</label> <br>
     <select required>
       <option value=""><i>Select a race</i></option>
-      <option value="3km">3KM Fun Run</option>
-      <option value="5km">5KM City Sprint</option>
-      <option value="10km">10KM Challenge</option>
+      <option value="5km">5KM Fun Run</option>
+      <option value="5km">10KM City Sprint</option>
+
     </select> <br>
 
     <label>T-Shirt Size</label> <br>
-    <select>
+    <select required>
       <option>S</option><option>M</option><option>L</option><option>XL</option>
     </select> <br>
     <br>
@@ -70,20 +55,44 @@
 
   <div class="info">
     <br>
-    <h3>Entry Fees</h3>
-    <ul>
-      <li>3KM -- $10</li>
-      <li>5KM -- $15</li>
-      <li>10KM -- $20</li>
-    </ul>
+<div class="info">
+  <h3>Entry Fees</h3>
+
+  <table>
+    <tr>
+      <th>Distance</th>
+      <th>Price</th>
+      <th style="text-align: center;">Trail Condition</th>
+    </tr>
+    <tr>
+      <td>5KM</td>
+      <td>$10</td>
+      <td>Smooth trails alongside local silk farms.</td>
+    </tr>
+    <tr>
+      <td>10KM</td>
+      <td>$15</td>
+      <td>Mix of dirt paths and paved roads with beautiful river views.</td>
+    </tr>
+  </table>
+</div>
+
     <br>
-    <p style="color: brown;"><i>Registration closes December, 14, 2025.</i></p>
+    <p style="color: brown;"><i>Registration closes December 14, 2025.</i></p>
+    
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 Koh Dach Run | Supporting the Silk Island Community</p>
+    <p>&copy; 2025 Marathon Cambodia | All Rights Reserved</p>
+    <div class="social">
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+    </div>
 </footer>
+
+<link rel="stylesheet" href="style.css">
 
 </body>
 </html>
