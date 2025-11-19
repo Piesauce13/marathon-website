@@ -1018,3 +1018,11 @@ select {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 800px) {
+  .gender-option{
+    margin: 0px;
+  }
+}
+
+
+
