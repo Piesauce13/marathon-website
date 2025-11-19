@@ -1028,7 +1028,7 @@ input::placeholder{
 }
 input[type="radio"]{
   width: 12%;
-  height: 15px;
+  height: 11px;
   margin-right: 0rem;
   padding: 0px;
 }
