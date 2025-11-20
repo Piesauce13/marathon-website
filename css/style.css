@@ -1046,6 +1046,29 @@ input[type="radio"]{
   .gender-option{
     margin: 0px;
   }
+  
+  /* ADD THESE NEW RULES BELOW */
+  /* 1. Reduces the big white gap on the sides for mobile */
+  .about {
+    padding: 20px 15px; 
+  }
+
+  /* 2. Ensures the Map container never pushes the screen width */
+  .map-container iframe {
+    width: 100% !important;
+    height: 300px; /* Optional: Makes map shorter on mobile to save space */
+  }
+
+  /* 3. Ensures the Contact Form inputs don't overflow */
+  .contact-form-container {
+    width: 100%;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
