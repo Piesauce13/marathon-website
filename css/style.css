@@ -119,13 +119,52 @@ header {
   background-color: #218c74;
   transform: translateY(-2px);
 }
+/* Footer Designs */
 
-footer {
-  text-align: center;
+.footer {
   background: #0a3d62;
-  color: white;
-  padding: 20px;
+  color: #fff;
+  padding: 1rem 5%; /* responsive padding */
+  text-align: center;
+  margin-top: 4rem;
 }
+
+.footer-title {
+  font-size: clamp(1rem, 1vw, 2rem);
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+.footer-tagline {
+  margin-top: 0.4rem;
+  font-size: clamp(0.7rem, 1.5vw, 1.1rem);
+  color: #bbb;
+}
+
+.footer-social {
+  margin: 0.3rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem; /* scales with rem */
+}
+
+.footer-social img {
+  width: clamp(4rem, 3vw, 2.5rem); 
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+.footer-copyright {
+  margin-top: 0.3rem;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  color: #777;
+}
+
 
 /* ======================= */
 /* --- HOMEPAGE STYLES --- */
@@ -628,17 +667,42 @@ footer {
   line-height: 1.7;
 }
 
+/* --- Responsive adjustments for the Contact Page --- */
+@media (max-width: 992px) {
+  .contact-main-layout {
+    grid-template-columns: 1fr; /* Stack columns on tablets and smaller */
+  }
+}
+
+/* -------------------- Race Overview -------------------- */
 /* =========================== */
 /* --- RACES PAGE STYLES --- */
 /* ==========================*/
 
 .race-overview {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(45deg, #0a3d62, #0078d4);
+  padding: 60px 20px;
+  background: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)),
+              url('../assets/images/marathonrunningimage.jpg') center/cover no-repeat;
   color: white;
+}
+
+.race-overview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: brightness(0.8); 
+  z-index: 0;
+}
+
+.race-overview * {
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .race-overview h1 {
@@ -657,7 +721,7 @@ footer {
 .race-overview .btn {
   display: inline-block;
   padding: 12px 30px;
-  background: linear-gradient(45deg, #0a3d62, #0078d4);
+  background-color: #38ada9;
   color: white;
   border-radius: 10px;
   font-weight: bold;
@@ -673,6 +737,7 @@ footer {
   background: linear-gradient(45deg, #218c74, #0078d4);
 }
 
+/* -------------------- Race Cards Section (Advanced) */
 .race-section {
   padding: 4rem 1rem;
   background: #f4f7fb;
@@ -684,8 +749,10 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  perspective: 1200px; /* subtle depth for hover effect */
   perspective: 1200px;
 }
+
 
 .race-card {
   width: 320px;
@@ -746,12 +813,62 @@ footer {
   transform: scale(1.05);
 }
 
+/* Hover lift + glow */
+.race-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.race-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(0,198,255,0.4), rgba(56,173,169,0.4));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.race-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Content on top of glow */
+.race-card img,
+.race-card h3,
+.race-card ul,
+.race-card a {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card Image */
+.race-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.race-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Card Title */
 .race-card h3 {
   color: #0078d4;
   font-size: 1.6rem;
   margin: 1rem 0 0.5rem;
 }
 
+/* Info List */
 .race-card ul.race-info {
   list-style: none;
   padding: 0 1.5rem;
@@ -772,11 +889,79 @@ footer {
   margin-right: 5px;
 }
 
+/* Register Button */
 .btn-register {
   display: inline-block;
   padding: 12px 28px;
   color: white;
-  background-color: #0078d4;
+  background-color: #38ada9;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 1rem auto 1.5rem;
+  transition: all 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-register:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(45deg, #218c74, #0078d4);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 992px) {
+  .race-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .race-card {
+    width: 90%;
+    transform: translateY(0px) !important; /* remove stagger on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .race-card img {
+    height: 180px;
+  }
+  .race-card h3 {
+    font-size: 1.4rem;
+  }
+  .race-card ul.race-info li {
+    font-size: 0.95rem;
+  }
+  .btn-register {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+/* -------------------- Additional Information Table -------------------- */
+
+
+.race-card ul.race-info li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+.race-card ul.race-info li::before {
+  content: '• ';
+  color: #0078d4;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.btn-register {
+  display: inline-block;
+  padding: 12px 28px;
+  color: white;
+  background-color: #38ada9;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1rem;
@@ -829,6 +1014,80 @@ footer {
 
 .race-info-table tr:last-child td {
   border-bottom: none;
+}
+
+.race-info-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.race-info-table tr:hover {
+  background-color: #e6f2ff;
+}
+
+.race-info-table td:first-child {
+  font-weight: bold;
+  color: #0078d4;
+  width: 40%;
+}
+
+.race-info-table td:last-child {
+  width: 60%;
+}
+
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 992px) {
+  .race-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .race-card {
+    width: 90%;
+  }
+  .race-overview h1 {
+    font-size: 2rem;
+  }
+  .race-overview p {
+    font-size: 1rem;
+  }
+  .race-details {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .race-card img {
+    height: 180px;
+  }
+  .race-card h3 {
+    font-size: 1.4rem;
+  }
+  .race-card ul.race-info li {
+    font-size: 0.95rem;
+  }
+  .race-info-table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .race-overview h1 {
+    font-size: 1.7rem;
+  }
+  .race-overview p {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+
+/* Register Section */
+label{
+    display: inline-block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300%;
 }
 
 .race-info-table tr:nth-child(even) {
