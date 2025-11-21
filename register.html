@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Register | Marathon 2025</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,7 +16,7 @@
         <span>Koh Dach Run 2025</span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li>
           <a href="about.html">About</a>
           <ul class="dropdown">
@@ -25,13 +26,13 @@
           </ul>
         </li>
         <li>
-          <a href="races.html">Races</a>
+          <a href="races.html" >Races</a>
           <ul class="dropdown">
             <li><a href="races.html#5km">5Km Run</a></li>
             <li><a href="races.html#10km">10km Run</a></li>
           </ul>
         </li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
         <li>
           <a href="contact.html">Contact</a>
           <ul class="dropdown">
@@ -42,50 +43,90 @@
       </ul>
     </nav>
   </header>
-
-<section class="register">
+<section class="card reg">
   <h1>Register for the Marathon</h1>
-  <form>
+  <form action="https://link.payway.com.kh/3w392007R" method="post">
     <label>Full Name</label> <br>
-    <input type="text" required placeholder="John Wick"> <br>
+    <input type="text" required placeholder="Sokha Raingsey"> <br>
 
     <label>Email</label> <br>
-    <input type="email" required placeholder="johnwick12@hotmail.com"> <br>
+    <input type="email" required placeholder="sokha182@hotmail.com"> <br>
+    <label for="gender">Gender 
+    </label> <br> <br>
+    <input type="radio" name="gender" class="gender-option"><b><i>Female 
+    <input type="radio" name="gender" class="gender-option">Male
+    <input type="radio" name="gender" class="gender-option">Prefer not to say </b></i>
+    <br>
+
 
     <label>Race Category</label> <br>
     <select required>
       <option value=""><i>Select a race</i></option>
-      <option value="3km">3KM Fun Run</option>
-      <option value="5km">5KM City Sprint</option>
-      <option value="10km">10KM Challenge</option>
+      <option value="5km" id="5km">5KM Fun Run</option>
+      <option value="5km" id="10km">10KM City Sprint</option>
+
     </select> <br>
 
     <label>T-Shirt Size</label> <br>
-    <select>
+    <select required>
       <option>S</option><option>M</option><option>L</option><option>XL</option>
     </select> <br>
     <br>
-    <button type="submit" class="btn">Submit Registration</button> 
+    <button type="submit" class="btn-register" style="border: none;">Submit & Proceed to payment</button> 
   </form>
 
   <div class="info">
     <br>
-    <h3>Entry Fees</h3>
-    <ul>
-      <li>3KM -- $10</li>
-      <li>5KM -- $15</li>
-      <li>10KM -- $20</li>
-    </ul>
+<div class="info">
+  <h3>Entry Fees</h3>
+
+  <table>
+    <tr>
+      <th>Distance</th>
+      <th>Price</th>
+      <th style="text-align: center;">Trail Condition</th>
+    </tr>
+    <tr>
+      <td><a href="races.html#5km" style="text-decoration: underline; color: black;">5KM</a></td>
+      <td>$8</td>
+      <td>Smooth trails alongside local silk farms.</td>
+    </tr>
+    <tr>
+      <td><a href="races.html#10km" style="text-decoration: underline; color:black;">10KM</a></td>
+      <td>$15</td>
+      <td>Mix of dirt paths and paved roads with beautiful river views.</td>
+    </tr>
+  </table>
+</div>
+
     <br>
-    <p style="color: brown;"><i>Registration closes December, 14, 2025.</i></p>
+    <p style="color: brown;"><i>Registration closes December 14, 2025.</i></p>
+    
   </div>
 </section>
 
-<footer>
-  <p>&copy; 2025 Koh Dach Run | Supporting the Silk Island Community</p>
-</footer>
+  <footer class="footer">
+    <div class="footer-content">
 
-<link rel="stylesheet" href="style.css">
+      <p class="footer-tagline">Run • Explore • Experience Koh Dach Island</p>
+
+      <div class="footer-social">
+        <a href="#" target="_blank">
+          <img src="assets/icons/facebooklogo.png" alt="Facebook">
+        </a>
+        <a href="#" target="_blank">
+          <img src="assets/icons/instagramlogo.png" alt="Instagram">
+        </a>
+        <a href="#" target="_blank">
+          <img src="assets/icons/Telegramlogo.png" alt="Telegram">
+        </a>
+      </div>
+
+    </div>
+    <p class="footer-copyright">
+      © 2025 Koh Dach Run — All Rights Reserved
+    </p>
+  </footer>
 
 </body>
 </html>
