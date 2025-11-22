@@ -7,28 +7,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Header -->
   <header>
     <nav class="navbar">
-    <a href="index.html" class="navbar-title">
-      <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
-      <span>Koh Dach Run 2025</span>
-    </a>
-      <div class="hamburger">☰</div>
+      <a href="index.html" class="navbar-title">
+        <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
+        <span>Koh Dach Run 2025</span>
+      </a>
+      
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="about.html">About</a>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="dropdown-container">
+          <input type="checkbox" id="about-dropdown" class="dropdown-toggle">
+          <label for="about-dropdown" class="dropdown-label">
+            <a href="about.html">About</a>
+          </label>
           <ul class="dropdown">
             <li><a href="about.html#mission">Mission</a></li>
             <li><a href="about.html#gallery">Gallery</a></li>
             <li><a href="about.html#team">Our Team</a></li>
           </ul>
         </li>
-        <li><a href="races.html" class="active">Races</a></li>
+        <li><a href="races.html">Races</a></li>
         <li><a href="register.html">Register</a></li>
-        <li>
-          <a href="contact.html">Contact</a>
+        <li class="dropdown-container">
+          <input type="checkbox" id="contact-dropdown" class="dropdown-toggle">
+          <label for="contact-dropdown" class="dropdown-label">
+            <a href="contact.html">Contact</a>
+          </label>
           <ul class="dropdown">
             <li><a href="contact.html#contact">Message Us</a></li>
             <li><a href="contact.html#faq">FAQs</a></li>
@@ -64,7 +72,7 @@
           <li><strong>Fee:</strong> $8</li>
           <li><strong>Route:</strong> Smooth trails alongside local silk farms.</li>
         </ul>
-        <a href="register.html#5km" class="btn-register">Register</a>
+        <a href="register.html#5km" class="btn">Register</a>
       </div>
 
       <!-- 10km Card -->
@@ -77,7 +85,7 @@
           <li><strong>Fee:</strong> $15</li>
           <li><strong>Route:</strong> Mix of dirt paths and paved roads with beautiful river views.</li>
         </ul>
-        <a href="register.html#10km" class="btn-register">Register</a>
+        <a href="register.html#10km" class="btn">Register</a>
       </div>
 
     </div>

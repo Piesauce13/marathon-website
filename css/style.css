@@ -1,3 +1,8 @@
+/* ========================================
+   KOHL DACH RUN 2025 - STYLESHEET
+   ======================================== */
+
+/* BASE STYLES */
 * { 
   box-sizing: border-box; 
   margin: 0; 
@@ -11,8 +16,7 @@ body {
   color: #333;
 }
 
-/* --- NAVIGATION STYLES --- */
-
+/* NAVIGATION */
 header {
   background: #0a3d62;
   position: sticky;
@@ -40,6 +44,17 @@ header {
   text-decoration: none;
 }
 
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -50,7 +65,8 @@ header {
   position: relative;
 }
 
-.nav-links > li > a {
+.nav-links > li > a,
+.dropdown-label a {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -59,13 +75,23 @@ header {
   transition: background-color 0.3s ease;
 }
 
-.nav-links > li > a:hover {
+.nav-links > li > a:hover,
+.dropdown-label a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-links a.active {
   background-color: #38ada9;
   font-weight: bold;
+}
+
+.dropdown-toggle {
+  display: none;
+}
+
+.dropdown-label {
+  cursor: pointer;
+  display: block;
 }
 
 .dropdown {
@@ -81,7 +107,7 @@ header {
   list-style: none;
 }
 
-.nav-links > li:hover .dropdown {
+.dropdown-container:hover .dropdown {
   display: block;
 }
 
@@ -97,32 +123,45 @@ header {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- BUTTON --- */
-
+/* BUTTONS */
 .btn {
   display: inline-block;
-  margin-top: 20px;
   padding: 12px 30px;
-  background-color: #38ada9;
+  background: linear-gradient(145deg, #38ada9, #218c74);
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .btn:hover {
-  background-color: #218c74;
-  transform: translateY(-2px);
+  background: linear-gradient(45deg, #218c74, #0078d4);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.contact-form-container .btn {
+  width: 100%;
+}
+
+.race-card .btn {
+  margin: 1rem auto 1.5rem;
+}
+
+.cta-section .btn {
+  margin: 1rem auto 1.5rem;
 }
 
 /* FOOTER */
-
 .footer {
   background: #0a3d62;
   color: #fff;
-  padding: 1rem 5%; /* responsive padding */
+  padding: 1rem 5%;
   text-align: center;
   margin-top: 4rem;
 }
@@ -163,8 +202,7 @@ header {
   color: #777;
 }
 
-/* --- HOMEPAGE STYLES --- */
-
+/* HOME PAGE */
 .hero {
   min-height: 600px;
   display: flex;
@@ -287,16 +325,14 @@ header {
   max-width: 150px;
   height: auto;
   opacity: 0.7;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .sponsor-logos img:hover {
   opacity: 1;
 }
 
-/* --- ABOUT PAGE STYLES --- */
-
-/* background header*/
+/* ABOUT PAGE */
 .about-hero {
   min-height: 750px; 
   display: flex;
@@ -392,7 +428,6 @@ header {
   background-color: rgb(255, 255, 255);
   padding: 40px;
   border-radius: 10px;
-  box-shadow: none;
   font-family: 'Roboto', Arial, sans-serif;
 }
 
@@ -432,42 +467,6 @@ header {
   color: #555;
 }
 
-.about .mission-story-section {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
-.about .mission-story-text .lead-paragraph {
-  font-size: 1.5rem; 
-  color: #111;
-  margin-bottom: 1.5em;
-}
-
-.about .mission-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  font-size: 1.4rem;
-}
-
-.about .mission-list li {
-  margin-bottom: 10px;
-}
-
-.about .mission-story-text,
-.about .mission-story-image {
-  flex: 1;
-}
-
-.about .mission-story-image img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 .about .team-section {
   text-align: center;
   margin-bottom: 50px;
@@ -492,7 +491,7 @@ header {
 .about .team-member h4 {
   margin-top: 15px;
   margin-bottom: 5px;
-  font-size: 140%;
+  font-size: 1.4rem;
   color: #0a3d62;
 }
 
@@ -520,13 +519,6 @@ header {
 
 .about .cta-section h2 {
   border-bottom: none;
-}
-
-.about .btn-cta {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  width: auto;
 }
 
 .about .gallery-section {
@@ -603,8 +595,7 @@ header {
   transition-delay: 0.1s;
 }
 
-/* --- CONTACT PAGE STYLES --- */
-
+/* CONTACT PAGE */
 .contact-main-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -638,7 +629,6 @@ header {
   border-radius: 5px;
   font-size: 1rem;
   font-family: 'Roboto', Arial, sans-serif;
-  height: auto; 
   background-color: white;
 }
 
@@ -712,15 +702,7 @@ header {
   line-height: 1.7;
 }
 
-/* --- Responsive adjustments for the Contact Page --- */
-@media (max-width: 992px) {
-  .contact-main-layout {
-    grid-template-columns: 1fr; /* Stack columns on tablets and smaller */
-  }
-}
-
-/* --- RACES PAGE STYLES --- */
-
+/* RACES PAGE */
 .race-overview {
   min-height: 600px;
   display: flex;
@@ -731,6 +713,7 @@ header {
   background: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)),
               url('../assets/images/marathonrunningimage.jpg') center/cover no-repeat;
   color: white;
+  position: relative;
 }
 
 .race-overview::before {
@@ -738,7 +721,6 @@ header {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: brightness(0.8); 
   z-index: 0;
 }
 
@@ -771,12 +753,10 @@ header {
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  width: auto;            
-  max-width: 260px;      
-  width: fit-content;      
-  margin: 0 auto;          
+  width: auto;
+  max-width: 260px;
+  margin: 0 auto;
 }
-
 
 .race-overview .btn:hover {
   transform: translateY(-3px) scale(1.05);
@@ -794,7 +774,6 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  perspective: 1200px; 
 }
 
 .race-card {
@@ -823,7 +802,7 @@ header {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(120deg, rgba(0,198,255,0.4), rgba(56,173,169,0.4));
+  /* background: linear-gradient(120deg, rgba(0,198,255,0.4), rgba(56,173,169,0.4)); */
   opacity: 0;
   transition: opacity 0.5s ease;
   border-radius: 20px;
@@ -856,60 +835,12 @@ header {
   transform: scale(1.05);
 }
 
-.race-card:hover {
-  transform: translateY(-15px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-}
-
-.race-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(120deg, rgba(0,198,255,0.4), rgba(56,173,169,0.4));
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  border-radius: 20px;
-  z-index: 0;
-}
-
-.race-card:hover::before {
-  opacity: 1;
-}
-
-.race-card img,
-.race-card h3,
-.race-card ul,
-.race-card a {
-  position: relative;
-  z-index: 1;
-}
-
-/* Card Image */
-.race-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  padding: 10px;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #eee;
-  transition: transform 0.3s ease;
-}
-
-.race-card img:hover {
-  transform: scale(1.05);
-}
-
-/* Card Title */
 .race-card h3 {
   color: #0078d4;
   font-size: 1.6rem;
   margin: 1rem 0 0.5rem;
 }
 
-/* Info List */
 .race-card ul.race-info {
   list-style: none;
   padding: 0 1.5rem;
@@ -928,94 +859,6 @@ header {
   color: #0078d4;
   font-weight: bold;
   margin-right: 5px;
-}
-
-/* Register Button */
-.btn-register {
-  display: inline-block;
-  padding: 12px 28px;
-  color: white;
-  background-color: #38ada9;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  margin: 1rem auto 1.5rem;
-  transition: all 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.btn-register:hover {
-  transform: translateY(-3px) scale(1.05);
-  background: linear-gradient(45deg, #218c74, #0078d4);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* -------------------- Responsive -------------------- */
-@media (max-width: 992px) {
-  .race-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .race-card {
-    width: 90%;
-    transform: translateY(0px) !important; /* remove stagger on small screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .race-card img {
-    height: 180px;
-  }
-  .race-card h3 {
-    font-size: 1.4rem;
-  }
-  .race-card ul.race-info li {
-    font-size: 0.95rem;
-  }
-  .btn-register {
-    padding: 10px 22px;
-    font-size: 0.95rem;
-  }
-}
-
-/* -------------------- Additional Information Table -------------------- */
-
-
-.race-card ul.race-info li {
-  margin-bottom: 0.6rem;
-  font-size: 1rem;
-  color: #333;
-  text-align: left;
-}
-
-.race-card ul.race-info li::before {
-  content: '• ';
-  color: #0078d4;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-.btn-register {
-  display: inline-block;
-  padding: 12px 28px;
-  color: white;
-  background-color: #38ada9;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  margin: 1rem auto 1.5rem;
-  transition: all 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.btn-register:hover {
-  transform: translateY(-3px) scale(1.05);
-  background: linear-gradient(45deg, #218c74, #0078d4);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .race-details {
@@ -1075,99 +918,24 @@ header {
   width: 60%;
 }
 
-
-/* -------------------- Responsive -------------------- */
-@media (max-width: 992px) {
-  .race-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .race-card {
-    width: 90%;
-  }
-  .race-overview h1 {
-    font-size: 2rem;
-  }
-  .race-overview p {
-    font-size: 1rem;
-  }
-  .race-details {
-    margin: 1rem;
-    padding: 2rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .race-card img {
-    height: 180px;
-  }
-  .race-card h3 {
-    font-size: 1.4rem;
-  }
-  .race-card ul.race-info li {
-    font-size: 0.95rem;
-  }
-  .race-info-table td {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-  .race-overview h1 {
-    font-size: 1.7rem;
-  }
-  .race-overview p {
-    font-size: 0.95rem;
-  }
+/* REGISTER PAGE */
+.card.reg{
+  width: 90%;
+  height: auto;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: none;
 
 }
-
-
-
-/* Register Section */
-label{
-    display: inline-block;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 300%;
-}
-
-.race-info-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.race-info-table tr:hover {
-  background-color: #e6f2ff;
-}
-
-.race-info-table td:first-child {
-  font-weight: bold;
-  color: #0078d4;
-  width: 40%;
-}
-
-.race-info-table td:last-child {
-  width: 60%;
-}
-/* ============================= */
-/* --- REGISTER PAGE STYLES --- */
-/* ============================ */
-
 label {
-  display: inline-block;
+  display: block;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300%;
 }
 
-.info {
-  padding: 10px;
-}
-
-.info ul {
-  padding-left: 15px;
-  padding-top: 15px;
-}
-
-input {
+input[type="text"], input[type="Email"]{
   border: none;
   padding: 5px;
   width: 100%;
@@ -1190,23 +958,45 @@ textarea::placeholder {
   font-size: 0.9rem;
   font-style: italic;
 }
-input[type="radio"]{
-  width: 12%;
-  height: 11px;
-  padding: 0px;
-  text-align: left;
-}
 
 .card label{
   float: left;
   font-weight: bold;
   font-size: 0.95rem;
-  text-decoration: wavy;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.card.reg{
-  background-color: #ffffff;
+.gender-option input[type="radio"]{
+  height: 10px;
+}
+.gender-option#male{
+  margin: 0px;
+  margin-left: -5px;
+  padding:0px ;
+  width: 25%;
+  font-weight: 500;
+}
+.gender-option#female{
+  margin: 0px;
+  padding:0px ;
+  width: auto;
+  font-weight: 500;
+}
+.gender-option#none{
+  margin: 0px;
+  margin-left: -10px;
+  padding: 0px;
+  width: 25%;
+  font-weight: 500;
+}
+
+.info {
+  padding: 10px;
+}
+
+.info ul {
+  padding-left: 15px;
+  padding-top: 15px;
 }
 .info li{
   list-style-type: none;
@@ -1234,48 +1024,40 @@ input[type="radio"]{
   border-bottom: none;
 }
 
-
-
 .info tr:hover {
   background-color: #f0f8ff;
 }
-
 
 .info td:first-child,
 .info th:first-child {
   width: 25%;
 }
 
-
 .info td:nth-child(2),
 .info th:nth-child(2) {
   text-align: center;
 }
-.btn-register a{
-  text-decoration: none;
-  color: white;
-}
-.gender-option{
-  margin: -30px;
-}
 
-
-/* ===================== */
-/* --- MEDIA QUERIES --- */
-/* ===================== */
-
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  /* 1. Navigation responsive */
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
+  .hamburger {
+    display: block;
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0a3d62;
+    padding: 20px 0;
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
   }
 
   .nav-links > li {
@@ -1288,22 +1070,6 @@ input[type="radio"]{
     background-color: #003366;
   }
 
-  .hamburger {
-    display: block;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-  }
-  
-  .hamburger:hover + .nav-links,
-  .nav-links:hover {
-    display: flex; 
-  }
-
-  /* 2. Homepage responsive */
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -1314,8 +1080,7 @@ input[type="radio"]{
 
   .highlights h2,
   .about-overview h2,
-  .sponsors h2,
-  .countdown h2 {
+  .sponsors h2 {
     font-size: 1.5rem;
   }
 
@@ -1323,106 +1088,88 @@ input[type="radio"]{
     grid-template-columns: 1fr;
   }
 
-  /* 3. About page responsive */
   .about .team-members {
     grid-template-columns: 1fr;
-  }
-
-  .about .mission-story-section {
-    flex-direction: column;
-  }
-  
-  .about .mission-story-image img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
   }
 
   .about .gallery-grid {
     grid-template-columns: 1fr;
   }
-  
-  /* Reduces side padding so content fits better */
+
   .about {
-    padding: 20px 10px; 
+    padding: 20px 10px;
   }
-/* About Hero Responsive Updates */
+
   .about-hero {
-    padding: 80px 20px; /* Less padding on mobile */
+    padding: 80px 20px;
     min-height: auto;
   }
 
   .about-hero h1 {
-    font-size: 2.2rem; /* Smaller title on mobile */
+    font-size: 2.2rem;
   }
-  
+
   .about-hero h2 {
     font-size: 1.8rem;
   }
-  
+
   .about-hero .hero-subtitle,
   .about-hero p,
   .hero-mission-list li {
-    font-size: 1rem; /* Standard reading size on mobile */
+    font-size: 1rem;
     line-height: 1.6;
   }
-  
+
   .mission-separator {
-    margin: 30px auto; /* Smaller gap on mobile */
+    margin: 30px auto;
   }
 
-  
-  /* Stack the Form and the Map vertically */
   .contact-main-layout {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-
   .map-container iframe {
-    width: 100% !important; 
-    height: 300px; /* Adjust height for mobile preference */
+    width: 100%;
+    height: 300px;
   }
 
-  /* Ensures the white box behind contact info doesn't overflow */
   .contact-info-container {
-    padding: 20px; 
+    padding: 20px;
     width: 100%;
   }
 
-  /* Ensures input fields don't push the screen width out */
   .contact-form-container {
     width: 100%;
   }
-  
+
   .form-group input,
   .form-group textarea {
     max-width: 100%;
   }
 
-  /* 5. Races page responsive */
   .race-card {
     width: 90%;
   }
-  
+
   .race-overview h1 {
     font-size: 2rem;
   }
-  
+
   .race-overview p {
     font-size: 1rem;
   }
-  
+
   .race-details {
     margin: 1rem;
     padding: 2rem 1rem;
   }
-  
+
   .race-overview .btn {
     width: auto;
   }
-  .gender-option{
+
+  .gender-option {
     margin: 0px;
   }
 }
@@ -1441,36 +1188,35 @@ input[type="radio"]{
     font-size: 0.9rem;
   }
 
-  /* Races page extra small screens */
   .race-card img {
     height: 180px;
   }
-  
+
   .race-card h3 {
     font-size: 1.4rem;
   }
-  
+
   .race-card ul.race-info li {
     font-size: 0.95rem;
   }
-  
+
   .race-info-table td {
     font-size: 0.9rem;
     padding: 10px;
   }
-  
+
   .race-overview h1 {
     font-size: 1.7rem;
   }
-  
+
   .race-overview p {
     font-size: 0.95rem;
   }
-  
+
   .about h1 {
     font-size: 2rem;
   }
-  
+
   .about h2 {
     font-size: 1.5rem;
   }

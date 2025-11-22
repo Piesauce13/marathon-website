@@ -14,12 +14,16 @@
         <span>Koh Dach Run 2025</span>
       </a>
       
-      <div class="hamburger">☰</div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
       
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li class="dropdown-container">
-          <a href="about.html">About</a>
+          <input type="checkbox" id="about-dropdown" class="dropdown-toggle">
+          <label for="about-dropdown" class="dropdown-label">
+            <a href="about.html">About</a>
+          </label>
           <ul class="dropdown">
             <li><a href="about.html#mission">Mission</a></li>
             <li><a href="about.html#gallery">Gallery</a></li>
@@ -29,7 +33,10 @@
         <li><a href="races.html">Races</a></li>
         <li><a href="register.html">Register</a></li>
         <li class="dropdown-container">
-          <a href="contact.html">Contact</a>
+          <input type="checkbox" id="contact-dropdown" class="dropdown-toggle">
+          <label for="contact-dropdown" class="dropdown-label">
+            <a href="contact.html">Contact</a>
+          </label>
           <ul class="dropdown">
             <li><a href="contact.html#contact">Message Us</a></li>
             <li><a href="contact.html#faq">FAQs</a></li>
@@ -85,9 +92,7 @@
 
   <footer class="footer">
     <div class="footer-content">
-
       <p class="footer-tagline">Run • Explore • Experience Koh Dach Island</p>
-
       <div class="footer-social">
         <a href="#" target="_blank">
           <img src="assets/icons/facebooklogo.png" alt="Facebook">
@@ -99,11 +104,8 @@
           <img src="assets/icons/Telegramlogo.png" alt="Telegram">
         </a>
       </div>
-
     </div>
-    <p class="footer-copyright">
-      © 2025 Koh Dach Run — All Rights Reserved
-    </p>
+    <p class="footer-copyright">© 2025 Koh Dach Run – All Rights Reserved</p>
   </footer>
 
 </body>

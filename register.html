@@ -7,29 +7,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="navbar-title">
         <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
         <span>Koh Dach Run 2025</span>
       </a>
-      <div class="hamburger">☰</div>
+      
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="about.html">About</a>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="dropdown-container">
+          <input type="checkbox" id="about-dropdown" class="dropdown-toggle">
+          <label for="about-dropdown" class="dropdown-label">
+            <a href="about.html">About</a>
+          </label>
           <ul class="dropdown">
             <li><a href="about.html#mission">Mission</a></li>
             <li><a href="about.html#gallery">Gallery</a></li>
             <li><a href="about.html#team">Our Team</a></li>
           </ul>
         </li>
-        <li><a href="races.html" >Races</a></li>
-        <li><a href="register.html" class="active">Register</a></li>
-        <li>
-          <a href="contact.html">Contact</a>
+        <li><a href="races.html">Races</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li class="dropdown-container">
+          <input type="checkbox" id="contact-dropdown" class="dropdown-toggle">
+          <label for="contact-dropdown" class="dropdown-label">
+            <a href="contact.html">Contact</a>
+          </label>
           <ul class="dropdown">
             <li><a href="contact.html#contact">Message Us</a></li>
             <li><a href="contact.html#faq">FAQs</a></li>
@@ -38,21 +45,19 @@
       </ul>
     </nav>
   </header>
+
 <section class="card reg">
   <h1>Register for the Marathon</h1>
-  <form action="https://link.payway.com.kh/3w392007R" method="post">
+  <form>
     <label>Full Name</label> <br>
     <input type="text" required placeholder="Sokha Raingsey"> <br>
 
     <label>Email</label> <br>
     <input type="email" required placeholder="sokha182@hotmail.com"> <br>
-    <label for="gender">Gender 
-    </label> <br> <br>
-    <input type="radio" name="gender" class="gender-option"><b><i>Female 
-    <input type="radio" name="gender" class="gender-option">Male
-    <input type="radio" name="gender" class="gender-option">Prefer not to say </b></i>
-    <br>
-
+    <label for="gender">Gender </label> <br> <br>
+        <label class="gender-option" id="female" for="Female"><input type="radio" name="gender" value="female">  Female</label> 
+        <label class="gender-option" id="male" for="Male"><input type="radio" name="gender" value="male">   Male</label>
+        <label class="gender-option" for="None" id="none"><input type="radio" name="gender" value="none"> Prefer not to say</label> <br> <br>
 
     <label>Race Category</label> <br>
     <select required>
@@ -67,7 +72,7 @@
       <option>S</option><option>M</option><option>L</option><option>XL</option>
     </select> <br>
     <br>
-    <button type="submit" class="btn-register" style="border: none;">Submit & Proceed to payment</button> 
+    <button type="submit" class="btn" style="border: none;">Submit Registration</button> 
   </form>
 
   <div class="info">
@@ -92,11 +97,9 @@
       <td>Mix of dirt paths and paved roads with beautiful river views.</td>
     </tr>
   </table>
-</div>
-
+  </div>
     <br>
-    <p style="color: brown;"><i>Registration closes December 14, 2025.</i></p>
-    
+    <p style="color: brown;"><i>Registration closes <time datetime="2025-12-14">December 14, 2025</time>.</i></p>
   </div>
 </section>
 

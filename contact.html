@@ -9,16 +9,22 @@
 <body>
 
 <header>
-  <nav class="navbar">
-    <a href="index.html" class="navbar-title">
-      <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
-      <span>Koh Dach Run 2025</span>
-    </a>
-      <div class="hamburger">☰</div>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-title">
+        <img src="assets/icons/theLogo.png" alt="Koh Dach Run 2025 Logo" width="30">
+        <span>Koh Dach Run 2025</span>
+      </a>
+      
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="about.html">About</a>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="dropdown-container">
+          <input type="checkbox" id="about-dropdown" class="dropdown-toggle">
+          <label for="about-dropdown" class="dropdown-label">
+            <a href="about.html">About</a>
+          </label>
           <ul class="dropdown">
             <li><a href="about.html#mission">Mission</a></li>
             <li><a href="about.html#gallery">Gallery</a></li>
@@ -27,16 +33,19 @@
         </li>
         <li><a href="races.html">Races</a></li>
         <li><a href="register.html">Register</a></li>
-        <li>
-          <a href="contact.html" class="active">Contact</a>
+        <li class="dropdown-container">
+          <input type="checkbox" id="contact-dropdown" class="dropdown-toggle">
+          <label for="contact-dropdown" class="dropdown-label">
+            <a href="contact.html">Contact</a>
+          </label>
           <ul class="dropdown">
             <li><a href="contact.html#contact">Message Us</a></li>
             <li><a href="contact.html#faq">FAQs</a></li>
           </ul>
         </li>
       </ul>
-    </nav>    
-</header>
+    </nav>
+  </header>
 
 <section class="about">
   <div class="intro-section">
@@ -63,7 +72,7 @@
           <textarea id="message" name="message" rows="6" placeholder="Please enter Your Message" required="Please Enter Your Message"></textarea>
         </div>
         <!-- REUSED: The .btn and .btn-cta classes style the button perfectly -->
-        <button type="submit" class="btn btn-cta">Send Message</button>
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </div>
 
