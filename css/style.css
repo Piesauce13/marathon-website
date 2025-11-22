@@ -1223,7 +1223,7 @@ input[type="radio"]{
 /* ===================== */
 
 @media (max-width: 768px) {
-  /* Navigation responsive */
+  /* 1. Navigation responsive */
   .navbar {
     flex-direction: column;
     gap: 15px;
@@ -1256,13 +1256,12 @@ input[type="radio"]{
     top: 15px;
   }
   
-  /* -added the missing bracket here */
   .hamburger:hover + .nav-links,
   .nav-links:hover {
     display: flex; 
   }
 
-  /* Homepage responsive (UNCHANGED) */
+  /* 2. Homepage responsive */
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -1282,18 +1281,18 @@ input[type="radio"]{
     grid-template-columns: 1fr;
   }
 
-  /* About page responsive */
+  /* 3. About page responsive */
   .about .team-members {
     grid-template-columns: 1fr;
   }
 
   .about .mission-story-section {
-    flex-direction: column; /* Puts text on top of image */
+    flex-direction: column;
   }
   
   .about .mission-story-image img {
     width: 100%;
-    height: auto; /* Fixes the squished/stretched image */
+    height: auto;
     max-height: 300px;
     object-fit: cover;
   }
@@ -1302,16 +1301,42 @@ input[type="radio"]{
     grid-template-columns: 1fr;
   }
   
+  /* Reduces side padding so content fits better */
   .about {
-    padding: 20px 10px; /* Reduces side white space on mobile */
+    padding: 20px 10px; 
   }
 
-  /* Contact page responsive (UNCHANGED) */
+
+  
+  /* Stack the Form and the Map vertically */
   .contact-main-layout {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  /* Races page responsive (UNCHANGED) */
+
+  .map-container iframe {
+    width: 100% !important; 
+    height: 300px; /* Adjust height for mobile preference */
+  }
+
+  /* Ensures the white box behind contact info doesn't overflow */
+  .contact-info-container {
+    padding: 20px; 
+    width: 100%;
+  }
+
+  /* Ensures input fields don't push the screen width out */
+  .contact-form-container {
+    width: 100%;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    max-width: 100%;
+  }
+
+  /* 5. Races page responsive */
   .race-card {
     width: 90%;
   }
