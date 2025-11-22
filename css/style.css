@@ -384,7 +384,7 @@ header {
 
 /* The Teal Line Separator */
 .mission-separator {
-  width: 1000px;
+  width: 300px;
   height: 1px;
   background-color: #38ada9;
   margin: 50px auto; /* Large gap above and below the line */
