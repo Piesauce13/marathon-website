@@ -1165,8 +1165,30 @@ textarea::placeholder {
     width: auto;
   }
 
-  .gender-option {
+  .card.reg h1{
+    font-size: 20px;
+  }
+
+  .gender-option{
     margin: 0px;
+    padding: 0px;
+    text-align: left;
+    height: 1rem;
+  }
+  .gender-option#male{
+    font-size: 0.85em;
+    width: 20%;
+    margin: 0;
+  }
+  .gender-option#female{
+    font-size: 0.85em;
+    width: 25%;
+    margin: 0;
+  }
+  .gender-option#none{
+    font-size: 0.85em;
+    width: auto;
+    margin: 0;
   }
 }
 
