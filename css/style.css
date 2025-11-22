@@ -1216,4 +1216,25 @@ textarea::placeholder {
   .about h2 {
     font-size: 1.5rem;
   }
+  .gender-option{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    height: 1rem;
+  }
+  .gender-option#male{
+    font-size: 0.7em;
+    width: 25%;
+    margin: 0;
+  }
+  .gender-option#female{
+    font-size: 0.7em;
+    width: 25%;
+    margin: 0;
+  }
+  .gender-option#none{
+    font-size: 0.7em;
+    width: auto;
+    margin: 0;
+  }
 }
