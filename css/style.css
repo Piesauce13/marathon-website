@@ -1142,10 +1142,10 @@ select {
   border: none;
 }
 
-
-input::placeholder{
+input::placeholder,
+textarea::placeholder { 
   color: rgb(168, 155, 155);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: italic;
 }
 input[type="radio"]{
