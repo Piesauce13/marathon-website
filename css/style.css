@@ -1221,6 +1221,7 @@ input[type="radio"]{
 /* ===================== */
 /* --- MEDIA QUERIES --- */
 /* ===================== */
+
 @media (max-width: 768px) {
   /* Navigation responsive */
   .navbar {
@@ -1245,7 +1246,6 @@ input[type="radio"]{
     background-color: #003366;
   }
 
-    /* Add these 2 new rules */
   .hamburger {
     display: block;
     color: white;
@@ -1256,11 +1256,13 @@ input[type="radio"]{
     top: 15px;
   }
   
+  /* -added the missing bracket here */
   .hamburger:hover + .nav-links,
   .nav-links:hover {
-    display: flex; /* Show when hovering hamburger or nav */
+    display: flex; 
+  }
 
-  /* Homepage responsive */
+  /* Homepage responsive (UNCHANGED) */
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -1286,19 +1288,30 @@ input[type="radio"]{
   }
 
   .about .mission-story-section {
-    flex-direction: column;
+    flex-direction: column; /* Puts text on top of image */
+  }
+  
+  .about .mission-story-image img {
+    width: 100%;
+    height: auto; /* Fixes the squished/stretched image */
+    max-height: 300px;
+    object-fit: cover;
   }
 
   .about .gallery-grid {
     grid-template-columns: 1fr;
   }
+  
+  .about {
+    padding: 20px 10px; /* Reduces side white space on mobile */
+  }
 
-  /* Contact page responsive */
+  /* Contact page responsive (UNCHANGED) */
   .contact-main-layout {
     grid-template-columns: 1fr;
   }
 
-  /* Races page responsive */
+  /* Races page responsive (UNCHANGED) */
   .race-card {
     width: 90%;
   }
@@ -1321,29 +1334,6 @@ input[type="radio"]{
   }
   .gender-option{
     margin: 0px;
-  }
-  
-  /* ADD THESE NEW RULES BELOW */
-  /* 1. Reduces the big white gap on the sides for mobile */
-  .about {
-    padding: 20px 15px; 
-  }
-
-  /* 2. Ensures the Map container never pushes the screen width */
-  .map-container iframe {
-    width: 100% !important;
-    height: 300px; /* Optional: Makes map shorter on mobile to save space */
-  }
-
-  /* 3. Ensures the Contact Form inputs don't overflow */
-  .contact-form-container {
-    width: 100%;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    box-sizing: border-box; /* Ensures padding doesn't add to width */
-    max-width: 100%;
   }
 }
 
