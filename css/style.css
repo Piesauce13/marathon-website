@@ -700,6 +700,7 @@ header {
   font-size: 1rem;
   font-family: 'Roboto', Arial, sans-serif;
   height: auto; 
+  background-color: white;
 }
 
 .form-group input:focus,
