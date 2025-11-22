@@ -835,8 +835,14 @@ header {
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  width: 20%;
+
+  /* FIX */
+  width: auto;             /* Make size natural */
+  max-width: 260px;         /* Optional limit */
+  width: fit-content;       /* Fully responsive */
+  margin: 0 auto;           /* Center it */
 }
+
 
 .race-overview .btn:hover {
   transform: translateY(-3px) scale(1.05);
