@@ -617,8 +617,8 @@ header {
   color: #333;
 }
 
-.form-group input,
-.form-group textarea {
+.contact-form-container .form-group input,
+.contact-form-container .form-group textarea {
   width: 100%;
   padding: 15px;
   border: 1px solid #ccc;
