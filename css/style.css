@@ -969,22 +969,23 @@ textarea::placeholder {
   margin-bottom: 10px;
 }
 .gender-option input[type="radio"]{
-  height: 10px;
+  height: 0.65rem;
 }
-.gender-option#male{
+
+.gender-option#boy{
   margin: 0px;
   margin-left: -5px;
   padding:0px ;
   width: 25%;
   font-weight: 500;
 }
-.gender-option#female{
+.gender-option#girl{
   margin: 0px;
   padding:0px ;
   width: auto;
   font-weight: 500;
 }
-.gender-option#none{
+.gender-option#nth{
   margin: 0px;
   margin-left: -10px;
   padding: 0px;
@@ -1192,17 +1193,17 @@ textarea::placeholder {
     text-align: left;
     height: 1rem;
   }
-  .gender-option#male{
+  .gender-option#boy{
     font-size: 0.85em;
     width: 20%;
     margin: 0;
   }
-  .gender-option#female{
+  .gender-option#girl{
     font-size: 0.85em;
     width: 25%;
     margin: 0;
   }
-  .gender-option#none{
+  .gender-option#nth{
     font-size: 0.85em;
     width: auto;
     margin: 0;
@@ -1279,17 +1280,17 @@ textarea::placeholder {
     text-align: left;
     height: 1rem;
   }
-  .gender-option#male{
+  .gender-option#boy{
     font-size: 0.83em;
     width: 25%;
     margin: 0;
   }
-  .gender-option#female{
+  .gender-option#girl{
     font-size: 0.83em;
     width: 25%;
     margin: 0;
   }
-  .gender-option#none{
+  .gender-option#nth{
     font-size: 0.83em;
     width: auto;
     margin: 0;
