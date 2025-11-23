@@ -1280,17 +1280,17 @@ textarea::placeholder {
     height: 1rem;
   }
   .gender-option#male{
-    font-size: 0.7em;
+    font-size: 0.83em;
     width: 25%;
     margin: 0;
   }
   .gender-option#female{
-    font-size: 0.7em;
+    font-size: 0.83em;
     width: 25%;
     margin: 0;
   }
   .gender-option#none{
-    font-size: 0.7em;
+    font-size: 0.83em;
     width: auto;
     margin: 0;
   }
