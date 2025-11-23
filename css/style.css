@@ -915,6 +915,7 @@ header {
 }
 
 /* REGISTER PAGE */
+
 .card.reg{
   width: 90%;
   height: auto;
@@ -931,7 +932,9 @@ label {
   font-weight: 300%;
 }
 
-input[type="text"], input[type="email"]{
+
+
+input[type="text"], input[type="Email"]{
   border: none;
   padding: 5px;
   width: 100%;
@@ -946,6 +949,7 @@ select {
   height: 30px;
   border: none;
   background-color: #f1f1f1;
+  padding: 5px;
 }
 
 input::placeholder,
@@ -953,7 +957,9 @@ textarea::placeholder {
   color: rgb(168, 155, 155);
   font-size: 0.9rem;
   font-style: italic;
+  padding: 5px;
 }
+
 
 .card label{
   float: left;
@@ -984,6 +990,12 @@ textarea::placeholder {
   padding: 0px;
   width: 25%;
   font-weight: 500;
+}
+
+
+.btn-register a{
+  text-decoration: none;
+  color: white;
 }
 
 .info {
@@ -1020,19 +1032,24 @@ textarea::placeholder {
   border-bottom: none;
 }
 
+
+
 .info tr:hover {
   background-color: #f0f8ff;
 }
+
 
 .info td:first-child,
 .info th:first-child {
   width: 25%;
 }
 
+
 .info td:nth-child(2),
 .info th:nth-child(2) {
   text-align: center;
 }
+
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
