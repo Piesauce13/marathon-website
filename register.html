@@ -57,25 +57,29 @@
 
     <label>Email</label> <br>
     <input type="email" required placeholder="sokha182@hotmail.com"> <br>
-    <label for="gender">Gender </label> <br> <br>
-        <label class="gender-option" id="female" for="Female"><input type="radio" name="gender" value="female">  Female</label> 
-        <label class="gender-option" id="male" for="Male"><input type="radio" name="gender" value="male">   Male</label>
-        <label class="gender-option" for="None" id="none"><input type="radio" name="gender" value="none"> Prefer not to say</label> <br> <br>
+    <label for="gender">Gender 
+    </label> <br> <br>
+    <label class="gender-option" id="female" for="Female"><input type="radio" name="gender" value="female">  Female</label> 
+    <label class="gender-option" id="male" for="Male"><input type="radio" name="gender" value="male">   Male</label>
+    <label class="gender-option" for="None" id="none"><input type="radio" name="gender" value="none"> Prefer not to say</label> <br>
+    
+
 
     <label>Race Category</label> <br>
     <select required>
       <option value=""><i>Select a race</i></option>
       <option value="5km" id="5km">5KM Fun Run</option>
-      <option value="5km" id="10km">10KM City Sprint</option>
+      <option value="10km" id="10km">10KM City Sprint</option>
 
     </select> <br>
 
     <label>T-Shirt Size</label> <br>
     <select required>
-      <option>S</option><option>M</option><option>L</option><option>XL</option>
+      <option value="">Select a size</option>
+      <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option>
     </select> <br>
     <br>
-    <button type="submit" class="btn" style="border: none;">Submit Registration</button> 
+    <button type="submit" class="btn-register" style="border: none;">Submit Registration</button> 
   </form>
 
   <div class="info">
@@ -100,9 +104,11 @@
       <td>Mix of dirt paths and paved roads with beautiful river views.</td>
     </tr>
   </table>
-  </div>
+</div>
+
     <br>
     <p style="color: brown;"><i>Registration closes <time datetime="2025-12-14">December 14, 2025</time>.</i></p>
+    
   </div>
 </section>
 
