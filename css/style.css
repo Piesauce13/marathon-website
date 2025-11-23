@@ -1205,7 +1205,31 @@ textarea::placeholder {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+  
+  .about-hero {
+    padding: 50px 15px;
+    min-height: auto;
+  }  
 
+  .about-hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .about-hero p, 
+  .about-hero .hero-subtitle,
+  .hero-mission-list li {
+    font-size: 0.95rem;
+  }
+  
+  .mission-separator {
+    width: 150px; 
+    margin: 20px auto;
+
+  .about {
+    padding: 20px 10px;
+  }
+      
   .race-card img {
     height: 180px;
   }
@@ -1231,13 +1255,6 @@ textarea::placeholder {
     font-size: 0.95rem;
   }
 
-  .about h1 {
-    font-size: 2rem;
-  }
-
-  .about h2 {
-    font-size: 1.5rem;
-  }
   .gender-option{
     margin: 0px;
     padding: 0px;
