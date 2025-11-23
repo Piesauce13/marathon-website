@@ -1225,6 +1225,7 @@ textarea::placeholder {
   .mission-separator {
     width: 150px; 
     margin: 20px auto;
+  }
 
   .about {
     padding: 20px 10px;
@@ -1276,5 +1277,4 @@ textarea::placeholder {
     width: auto;
     margin: 0;
   }
-}
 }
