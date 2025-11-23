@@ -931,7 +931,7 @@ label {
   font-weight: 300%;
 }
 
-input[type="text"], input[type="Email"]{
+input[type="text"], input[type="email"]{
   border: none;
   padding: 5px;
   width: 100%;
