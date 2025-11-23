@@ -620,7 +620,7 @@ header {
 .contact-form-container .form-group input,
 .contact-form-container .form-group textarea {
   width: 100%;
-  padding: 15px;
+  padding: 7px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
